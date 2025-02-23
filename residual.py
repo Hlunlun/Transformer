@@ -7,7 +7,7 @@ class LayerNorm(nn.Module):
     - Residual connection around each of the two sub-layers
     """
     def __init__(self, features, eps=1e-6) -> None:
-        super(LayerNorm).__init__()
+        super(LayerNorm, self).__init__()
         self.a_2 = nn.Parameter(torch.ones(features))
         self.b_2 = nn.Parameter(torch.zeros(features))
         self.eps = eps
